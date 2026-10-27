@@ -1,0 +1,62 @@
+<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>Interactive Circles</title>
+
+  <style>
+    body {
+      font-family: sans-serif;
+      margin: 24px;
+    }
+
+    canvas {
+      display: block;
+      max-width: 100%;
+      height: auto;
+      background: #f3f4f6;
+      margin: 12px 0;
+      touch-action: none;
+    }
+
+    button, input, select {
+      margin-right: 12px;
+      margin-bottom: 10px;
+    }
+  </style>
+</head>
+
+<body>
+
+  <h1>Interactive Circles</h1>
+
+  <label for="circleSelect">Choose Circle:</label>
+
+  <select id="circleSelect">
+    <option value="0">Circle 1</option>
+    <option value="1">Circle 2</option>
+    <option value="2">Circle 3</option>
+  </select>
+
+  <button id="changeColor" type="button">Change Color</button>
+
+  <br>
+
+  <label for="speed">Speed:</label>
+  <input id="speed" type="number" value="2" min="1" max="10">
+
+  <button id="applySpeed" type="button">Apply Speed</button>
+
+  <button id="toggle" type="button">Pause</button>
+
+  <button id="reset" type="button">Reset</button>
+
+  <canvas id="scene" width="640" height="360">
+    This example requires a browser with canvas support.
+  </canvas>
+
+  <script type="module" src="./dist/main.js"></script>
+
+</body>
+</html>
